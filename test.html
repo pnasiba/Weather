@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .light-mode {
+            background-color: #c7c6c6;
+            color: black;
+        }
+
+        center{
+            font-size: large;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body class="light-mode">
+    <button id="toggleButton">Toggle Mode</button>
+    <center>Hello</center>
+
+    <script>
+        const body = document.body;
+        const toggleButton = document.getElementById('toggleButton');
+        let isDarkMode = false;
+
+        toggleButton.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+            body.classList.toggle('dark-mode', isDarkMode);
+            body.classList.toggle('light-mode', !isDarkMode);
+            toggleButton.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+        });
+    </script>
+</body>
+
+</html>

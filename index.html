@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fav icon -->
+    <link rel="icon" href="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/cf/b9/28/cfb9281c-6354-e66e-5ee5-b2aeadf81c37/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.webp">
+    <!-- Box Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Weather</title>
+</head>
+<body class="light-mode">
+    <header class="pt-[63px] pb-[49px]">
+        <div class="container px-2 mx-auto">
+            <div class="flex justify-between items-start">
+                <div>
+                    <button id="darkMode" class="border-[1px] border-black py-[4px] pl-[6px] pr-[60px] rounded-[40px] ">
+                        <p id="dark" class="w-[25px] h-[25px] rounded-[50%] bg-[#111111] border-white"></p>
+                    </button>
+                    <p id="textDark" class="text-[18px] font-extrabold">Light Mode</p>
+                </div>
+
+                <div class="search-btn flex items-center gap-[15px] bg-[#d9d9d9] rounded-[40px] border-[1px] border-black pl-[25px] py-[2px] pr-[80px]">
+                    <i class='bx bx-search text-[45px] text-gray-500'></i>
+                    <input type="search" placeholder="Search for your preffered city..." class="bg-[#d9d9d9] w-[396px] outline-none">
+                </div>
+
+                <div>
+                    <button class="location-btn flex items-center gap-[4px] border-[1px] rounded-[40px] border-[#4CBB17] py-[4px] px-[26px] bg-[#4CBB17]">
+                        <i class='bx bx-current-location text-3xl'></i>
+                        <p class="text-[#FFFFFFCC] text-[22px] font-extrabold">Current Location</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container px-2 mx-auto">
+                <div class="intro__wrapper flex gap-[55px] mb-[49px]">
+
+                    <div class="weather-card px-[107px] pt-[53px] pb-[40px] rounded-[30px] bg-[#D9D9D9] text-center">
+                        <h1 class="text-4xl font-bold mb-[29px] text-[#292929]">Athens</h1>
+                        <div class="w-[296px]">
+                            <p class="text-[#292929] text-[96px] font-bold pb-0">09:03</p>
+                            <p class="text-[#292929] text-[20px] relative -top-5">Thursday, 31 Aug</p>
+                        </div>
+                    </div>
+
+                    <div class="weather-card celcies flex pl-[15px] pt-[0px] pb-[0px] rounded-[30px] bg-[#D9D9D9] items-start">
+                        <div class="text w-[204px]">
+                            <h1 class="celcies font-bold text-[80px]">24°C</h1>
+                            <div class="flex gap-[5px] items-center relative -top-7 mb-[5px]">
+                                <p class="font-semibold text-[#292929] text-[20px]">Feels like:</p>
+                                <p class="text-[32px] text-[#292929] font-bold">22°C</p>
+                            </div>
+
+                            <div class="flex gap-[10px] items-center mb-[13px]">
+                                <img src="./assets/images/sunrise.svg" alt="sunrise">
+                                <div>
+                                    <p class="font-bold text-[20px]">Sunrise</p>
+                                    <p class="font-semibold">06:37 AM</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-[10px] items-center">
+                                <img src="./assets/images/sunset.svg" alt="sunset">
+                                <div>
+                                    <p class="font-bold text-[20px]">Sunset</p>
+                                    <p class="font-semibold">20:37 AM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative -top-8 -left-6">
+                            <img src="./assets/images/sun.svg" alt="sun" >
+                            <p class="font-bold text-[32px] text-center">Sunny</p>
+                        </div>
+
+                        <div class="pr-4 -pl-4">
+                            <div class="flex gap-[20px] pt-[20px] items-baseline mb-[20px]">
+                                <div>
+                                    <img src="./assets/images/humidity.svg" alt="humidity">
+                                    <p class="text-[20px] font-semibold text-center text-[#292929] mb-[5px]">41%</p>
+                                    <p class="font-medium text-[#292929]">Humidity</p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="./assets/images/wind.svg" alt="wind" class="pl-4">
+                                    <p class="text-[20px] font-semibold text-[#292929] mb-[5px]">2km/h</p>
+                                    <p class="text-[#292929] font-medium">Wind Speed</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-[20px] items-baseline">
+                                <div>
+                                    <img src="./assets/images/pressure.svg" alt="pressure">
+                                    <p class="text-[20px] font-semibold text-center text-[#292929] mb-[5px]">997hPa</p>
+                                    <p class="font-medium text-[#292929]">Pressure</p>
+                                </div>
+                                <div class="text-center">
+                                    <img src="./assets/images/uv.svg" alt="uv" class="pl-4 pt-3">
+                                    <p class="text-[20px] font-semibold text-[#292929] text-center pl-4 mb-[5px]">8</p>
+                                    <p class="text-[#292929] font-medium pl-4">UV</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="second__wrapper flex justify-between mb-[61px]">
+                    <div class="weather-card2 rounded-[30px] bg-[#D9D9D9] pt-[10px] px-[30px]">
+                        <p class="font-bold text-[32px] text-[#292929] text-center">5 Days Forecast:</p>
+
+                        <div>
+                            <div class="flex gap-[42px] items-center">
+                                <img src="./assets/images/clouds1.svg" alt="clouds" class="h-[60px]">
+                                <p class="text-[24px] font-bold">20°C</p>
+                                <p class="text-[20px] font-bold">Friday, 1 Sep</p>
+                            </div>
+                            <div class="flex gap-[42px] items-center">
+                                <img src="./assets/images/clouds2.svg" alt="clouds"  class="h-[60px]">
+                                <p class="text-[24px] font-bold">22°C</p>
+                                <p class="text-[20px] font-bold">Friday, 1 Sep</p>
+                            </div>
+                            <div class="flex gap-[42px] items-center">
+                                <img src="./assets/images/clouds3.svg" alt="clouds"  class="h-[60px]">
+                                <p class="text-[24px] font-bold">27°C</p>
+                                <p class="text-[20px] font-bold">Friday, 1 Sep</p>
+                            </div>
+                            <div class="flex gap-[42px] items-center">
+                                <img src="./assets/images/clouds4.svg" alt="clouds"  class="h-[60px]">
+                                <p class="text-[24px] font-bold">18°C</p>
+                                <p class="text-[20px] font-bold">Friday, 1 Sep</p>
+                            </div>
+                            <div class="flex gap-[42px] items-center">
+                                <img src="./assets/images/clouds1.svg" alt="clouds"  class="h-[60px]">
+                                <p class="text-[24px] font-bold">16°C</p>
+                                <p class="text-[20px] font-bold">Friday, 1 Sep</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weather-card2 hourly rounded-[30px] bg-[#D9D9D9] pt-[10px] px-[76px] pb-[0px]">
+                        <p class="font-bold text-[32px] text-[#292929] text-center mb-[25px]">Hourly Forecast:</p>
+                    
+                        <div class="flex gap-[15px]">
+                            <div class="weather-box rounded-[40px] px-[23px] pt-[13px] pb-[18px] flex flex-col items-center">
+                                <p class="text-[#292929] text-[24px] font-bold">12:00</p>
+                                <img src="./assets/images/clouds3.svg" alt="sun">
+                                <p class="text-[#292929] text-[20px] font-bold">26°C</p>
+                                <img src="./assets/images/navigation.svg" alt="navigation">
+                                <p class="text-[#292929] text-[20px] font-bold">3km/h</p>
+                            </div>
+
+                            <div class="weather-box rounded-[40px] px-[23px] pt-[13px] pb-[18px] flex flex-col items-center">
+                                <p class="text-[#292929] text-[24px] font-bold">15:00</p>
+                                <img src="./assets/images/clouds3.svg" alt="sun">
+                                <p class="text-[#292929] text-[20px] font-bold">27°C</p>
+                                <img src="./assets/images/navigation.svg" alt="navigation">
+                                <p class="text-[#292929] text-[20px] font-bold">2km/h</p>
+                            </div>
+
+                            <div class="weather-box rounded-[40px] px-[23px] pt-[13px] pb-[18px] flex flex-col items-center">
+                                <p class="text-[#292929] text-[24px] font-bold">18:00</p>
+                                <img src="./assets/images/clouds1.svg" alt="sun">
+                                <p class="text-[#292929] text-[20px] font-bold">27°C</p>
+                                <img src="./assets/images/navigation.svg" alt="navigation">
+                                <p class="text-[#292929] text-[20px] font-bold">2km/h</p>
+                            </div>
+
+                            <div class="weather-box2 rounded-[40px] px-[23px] pt-[13px] pb-[18px] flex flex-col items-center">
+                                <p class="text-[#292929] text-[24px] font-bold">21:00</p>
+                                <img src="./assets/images/clouds1.svg" alt="sun">
+                                <p class="text-[#292929] text-[20px] font-bold">25°C</p>
+                                <img src="./assets/images/navigation.svg" alt="navigation">
+                                <p class="text-[#292929] text-[20px] font-bold">3km/h</p>
+                            </div>
+
+                            <div class="weather-box2 rounded-[40px] px-[23px] pt-[13px] pb-[18px] flex flex-col items-center">
+                                <p class="text-[#292929] text-[24px] font-bold">00:00</p>
+                                <img src="./assets/images/clouds3.svg" alt="sun">
+                                <p class="text-[#292929] text-[20px] font-bold">22°C</p>
+                                <img src="./assets/images/navigation.svg" alt="navigation">
+                                <p class="text-[#292929] text-[20px] font-bold">3km/h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="./utils/utils.js"></script>
+<script src="./script.js"></script>
+</html>
