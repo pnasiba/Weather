@@ -21,76 +21,7 @@ let celciesWeather = $(".celcies");
 //     console.log(data);
 // })()
 
-// --------------------------------- Dark Mode -----------------------------
 
-// function darkMode() {
-//   body.classList.toggle("darkMode");
-//   header.classList.toggle("darkMode");
-
-//   if (body.classList.contains("darkMode")) {
-//     localStorage.setItem("darkMode", true);
-//   } else {
-//     localStorage.setItem("dark-mode", false);
-//   }
-// }
-
-// darkModeBtn.addEventListener("click", () => {
-//   darkMode();
-// });
-
-// ----------------- Refresh paytidagi dark mode ---------------------
-
-// function dark() {
-//   let isDark = localStorage.getItem("darkMode");
-
-//   if (isDark == "true") {
-//     body.classList.add("darkMode");
-//     header.classList.add("darkMode");
-//   } else {
-//     body.classList.remove("darkMode");
-//     header.classList.remove("darkMode");
-//   }
-// }
-
-// dark();
-
-// let isDarkMode = false;
-// function applyLightMode() {
-//   body.style.backgroundColor = "#596064";
-//   body.style.color = "black";
-//   header.style.backgroundColor = "#596064";
-//   header.style.color = "black";
-//   main.style.backgroundColor = "#596064";
-//   main.style.color = "black";
-//   darkbtn.style.position = "relative";
-//   darkbtn.style.left = "0px";
-//   textDark.textContent = "Light Mode";
-//   isDarkMode = false;
-// }
-
-// function applyDarkMode() {
-//   body.style.backgroundColor = "#444444e0";
-//   body.style.color = "black";
-//   header.style.backgroundColor = "#444444e0";
-//   header.style.color = "black";
-//   main.style.backgroundColor = "#444444e0";
-//   main.style.color = "black";
-//   weatherCard.style.backgroundColor = "#444444e0";
-//   weatherCard.style.color = "black";
-//   darkbtn.style.position = "relative";
-//   darkbtn.style.right = "55px";
-//   textDark.textContent = "Dark Mode";
-//   isDarkMode = true;
-// }
-
-// const toggleDarkModeButton = document.querySelector("#darkMode");
-// toggleDarkModeButton.addEventListener("click", function () {
-//   if (isDarkMode) {
-//     applyLightMode();
-//   } else {
-//     applyDarkMode();
-//   }
-// });
 
 let isDarkMode = false;
 
